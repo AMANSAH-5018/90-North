@@ -1,0 +1,84 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    z-index: 1000;
+    text-align: center;
+  }
+  
+  /* Main Layout */
+  .container {
+    display: flex;
+    margin-top: 60px; /* Adjust for fixed navbar */
+    height: calc(100vh - 120px); /* Adjust for navbar and footer */
+  }
+  
+  /* Left Menu */
+  .left-menu {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 10px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .left-menu ul {
+    list-style-type: none;
+  }
+  
+  .left-menu ul li {
+    margin: 10px 0;
+  }
+  
+  #collapseBtn {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 2;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  /* Right Panel */
+  .right-panel {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 10px;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .left-menu,
+    .right-panel {
+      flex: none;
+      width: 100%;
+    }
+  }
+  
